@@ -1,0 +1,42 @@
+.imgleft{
+    height: 600px;
+}
+
+@media screen and (max-width:850px){
+
+    .containerflex{
+        flex-direction: column;
+       }
+    
+       .imgleft{
+           height: 550px;
+           margin: auto;
+           border-top-right-radius: 5%;
+           border-top-left-radius: 5%;
+       }
+    
+       .divright{
+           height: auto;
+           margin: auto;
+           width: 327.73px;
+           border-top-right-radius: 0;
+           border-bottom-left-radius: 5%;
+       }
+    
+       .p2{
+           text-align: center;
+       }
+    
+}
+
+@media screen and (max-width:369px){
+
+   .imgleft{
+       height: 400px;
+   }
+
+   .divright{
+       width: 238.36px;
+   }
+
+}

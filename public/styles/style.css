@@ -1,0 +1,600 @@
+
+body{
+    background-color: #1d0037;
+    margin: 0;
+    height: 100%;
+}
+
+ @font-face {
+    font-family: Staatliches;
+     src: url(/assets/fonts/Staatliches-Regular.ttf);
+ }
+
+ @font-face {
+    font-family: AfterSmile;
+     src: url(/assets/fonts/AfterSmile-Regular.otf);
+ }
+
+ @font-face {
+     font-family: swiss;
+     src: url(/assets/fonts/swiss-721.otf);
+ }
+
+/*--------------------header-------------------------------------------------------------------*/
+
+.container{
+    background-color: rgb(233, 227, 227); 
+}
+
+.departments{
+    position: relative;
+    color: white;
+    padding-left:20px;
+    margin-right: 60px;
+    height: 50px;
+    font-family: Staatliches;
+    font-size: 1.5em;
+    margin-top: 5.300px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.departments:hover{
+    cursor: pointer;
+    color: rgb(252, 211, 162);
+}
+
+.departments p{
+    margin: 0;
+    padding-right: 10px;
+}
+
+#barLinks{
+    display:none;
+    top: 2px;
+    left: 13px;
+    position: absolute;
+    width: 200px;
+    height: 330px;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+#bar1{
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border: 1px solid rgb(252, 211, 162);
+    border-bottom: none;
+    width: 145px;
+    height:53px;
+}
+
+#bar2{
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    border-top-left-radius:0;
+    height: calc(100% - 53px);
+    width: 100%;
+    background-color:rgb(216, 162, 252);
+    align-items: center;
+    justify-content: space-evenly;
+    border: 1px solid #1d0037;
+    border-top: none;
+}
+
+#bar2 a{
+    padding: 3px;
+    width: 100%;
+    padding-left: 6px;
+}
+
+.linkBox{
+    display: flex;
+    background-image: url(../assets/images/fundo.png);
+    background-size: cover;
+    width: 90%;
+    border: 1px solid darkblue;
+    border-radius: 5px;
+}
+
+.topHeader{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-image: url(../assets/images/fundo-inverso.png) ;
+    background-repeat: no-repeat;
+    background-size: cover;
+    align-items: center;
+}
+
+#jingle{
+    cursor:default;
+    left: 65px;
+    bottom: -20px;
+    position: absolute;
+    font-family: AfterSmile;
+    color:rgb(252, 211, 162);
+    font-size: 50px;
+    font-weight: 100;
+}
+
+.logo{ 
+   width: 270px; 
+}
+
+#brand{
+    margin-left:100px;
+    margin-right: 50px;
+}
+
+#banner{
+    overflow: hidden;
+    border-bottom-left-radius: 400px;
+    height: 300px;
+    width: 80%;
+    background-size: cover;
+}
+
+#wow{
+    width:100%
+}
+
+.menu{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-image: url(../assets/images/fundo.png);
+    height: 60.6px;  
+    background-size: cover; 
+}
+
+.links{
+    display: flex;
+    font-family: Staatliches;
+}
+
+.menu a:hover{
+    color: rgb(252, 211, 162) ;
+}
+
+.menu a:active{
+    color: rgb(124, 124, 124);
+}
+
+.menu a{
+    text-decoration: none;
+    color:white;
+}
+
+
+.contactAbout{
+    display: flex;
+    align-items: center;
+    padding: 0;
+    font-size: 1.5em;
+    margin: 0%;
+}
+
+.contactAbout a{
+    padding-right: 20px; 
+}
+
+.network{
+    padding-right: 10px;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    
+}
+
+.network img{
+    margin: 0;
+    padding-left: 20px;
+    padding-right: 20px;
+    height: 35px;
+    cursor: pointer;
+}
+
+/*---------------------------------Conteúdo páginas de mostruário--------------------------------------------------------------*/
+
+h1{
+ font-size: 1.5em;
+}
+
+section{   
+     margin: auto; 
+     display: flex;
+     flex-direction: row;
+     flex-wrap: wrap;
+     justify-content: space-evenly;
+     margin-top: 40px;
+     max-width: 1218px;
+}
+
+.center{
+
+  justify-content: center;
+
+}
+
+section a{
+   text-decoration: none;
+   color: rgb(107, 103, 93);
+}
+
+section a:hover{
+    color: rgb(6, 119, 194);
+}
+
+section div{
+    text-align:center;
+    font-family:swiss;
+    height: 500px;
+    max-width: 280px;
+    min-width: 280px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 40px;
+    border: 2px solid rgb(121, 27, 165);
+    border-radius: 16px;
+    background-color: white;
+}
+
+.center div{
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+section p{
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.preco{
+   color: rgb(32, 122, 206); 
+   font-size: 2em;
+   font-weight: 600;
+}
+
+/*----------------------conteúdo de página de produto----------------------*/
+.containerflex{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  color: white;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  margin-top: 80px;
+  margin-bottom: 80px;
+}
+
+.containerflex a{
+   text-decoration: none;
+   color: rgb(252, 211, 162) 
+}
+
+.divright{
+    border-top-right-radius: 5%;
+    border-bottom-right-radius: 5%;
+    background-color: rgb(28, 2, 53);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 317px;
+    width: 400px;
+    text-align: justify;
+    
+}
+
+.divright p{
+    font-size: 1.1em;
+    padding: 10px;
+    margin: 0;
+} 
+
+.p2{
+    border-top: 1px solid white;
+}
+
+.divright h1{
+    color: white;
+    font-size: 2em;
+    text-align: center;
+    padding: 10px;
+    margin: 0;
+    font-family:swiss;
+} 
+
+
+h4{
+    color: rgb(252, 211, 162);
+    margin: 0;
+    padding: 10px;
+    padding-top: 0;
+    font-size: 2em;
+    font-family:swiss;
+    text-align: center;
+}
+
+/*--------------------------------Footer------------------------------------------------------------------*/
+
+footer{
+    position: relative;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: white;
+    width: 100%;
+    background-image: url(../assets/images/fundo.png) ;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+}
+
+@keyframes flash{
+    0% {opacity:0%;}
+    50% {opacity:100%;}
+    0% {opacity:0%;}
+}
+
+.wowFooter{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    animation-name: flash;
+    animation-duration: 0.5s;
+    opacity: 0%;;
+}
+
+.lastcontainer{
+    padding-left: 10px;
+    padding-right: 10px;
+    display: flex;
+    flex-direction: row;
+}
+
+footer a{
+ text-decoration: none;
+ color: rgb(252, 211, 162);
+}
+
+.contact{   
+    text-align: center;
+    height: 100%;
+    width: 50%;
+    font-size: 1.2em;
+}
+
+.about{   
+    width: 50%;
+    font-size: 1.1em;
+    text-align: center;
+}
+
+.about p{
+    padding-left: 20px;
+    padding-right: 20px;
+    text-align: justify;
+}
+
+
+h3{  
+  margin-top: 19.200px;
+}
+
+#icon{   
+    height: 23px;    
+}
+
+#icontel{   
+    height: 20px;
+    padding-top: 2px;
+}
+
+/*----------------responsividade----------------*/
+
+@media screen and (max-width:838px){
+
+    .network img{
+        height: 30px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .menu a{
+        font-size: 20px;
+    }
+
+    #p{
+        font-size: 20px;
+    }
+    
+    #banner{
+        height:240px
+    }
+
+    
+    .topHeader{
+        height: 240px;
+    }
+
+
+    .logo{
+        width: 200px;
+    }
+
+    #jingle{
+        
+        font-size: 40px;
+    }
+
+    #bar1{
+        width: 130px;
+    }
+
+    #barLinks{
+        height: 280px;
+    }
+
+}
+
+@media screen and (max-width:827px){
+   
+    .card{
+        width: 350px;
+    }
+
+    
+
+}
+
+@media screen and (max-width:710px){
+ 
+    #banner{
+        display: none;
+    }
+
+    .topHeader{
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    #jingle{
+        position: relative;
+        margin: 0;
+        bottom :initial;
+        left :initial;
+        font-size: 40px;
+    }
+        
+
+    #brand{
+        margin: 0;
+    }
+
+    .logo{
+        margin-top: 20px;
+        width: 220px;
+    }
+
+    .menu{
+        height: 45px;
+    }
+
+    .departments{
+        height: auto;
+        padding-bottom: 5.5px;
+    }
+
+    #bar1{
+        height: 44px;
+    }
+
+    #barLinks{
+        top:-5px;
+    }
+
+    .network img{
+        margin: 0;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+}
+
+@media screen and (max-width:698px){
+
+    .card{
+        width: 300px;
+    }
+
+}
+
+@media screen and (max-width:596px){
+
+    .card{
+        width: 250px;
+    }
+
+}
+
+@media screen and (max-width:560px){
+
+    .network{
+        flex-direction: column;
+        position: absolute;
+        right: 0;
+        top: 50px;
+    }
+
+    .network img{
+        padding-bottom: 10px;
+        padding-right: 0px;
+    }
+
+    .menu{
+        justify-content: center;
+    }
+
+    #barLinks{
+        width:180px;
+    }
+}
+
+@media screen and (max-width:531px){
+
+    .lastcontainer{
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .about{
+        width: 100%;
+    }
+
+    .contact{
+        width: 100%;
+    }
+
+    .card{
+        width: 400px;
+    }
+}
+
+
+@media screen and (max-width:444px){
+    .logo{
+        width: 180px;
+    }
+
+    .topHeader{
+        height: 200px;
+    }
+
+    #jingle{
+        font-size: 30px;
+    }
+
+    
+
+    .network img{
+        height: 25px;
+    }
+}
+
+@media screen and (max-width:414px){
+
+    .card{
+        width: 300px;
+    }
+
+}
+
+@media screen and (max-width:330px){
+    .body{
+        min-width:330px ;
+    }
+
+    .container{
+        min-width: 330px;
+    }
+}

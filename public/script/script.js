@@ -1,5 +1,3 @@
-document.addEventListener("DOMContentLoaded", () => {
-})
 
 //Atualiza banner---------------------------------------------------
 

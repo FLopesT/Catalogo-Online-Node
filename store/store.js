@@ -1,7 +1,7 @@
 
 module.exports.functions = {
 
-    findCP: (c) => {  //retorna os produtos de uma categoria especifica
+    findCP: (c) => {  //retorna objeto os produtos de uma categoria especifica
         let products;
         content.forEach(item => {
             if (item.categoria == c) {
@@ -23,21 +23,20 @@ module.exports.functions = {
         let products = [];
         content.forEach(item => {
             item.produtos.forEach(prod => {
-                if (obj) {
+                if (obj) {                   //retorna objeto com todos os produtos
                     products.push(prod);
-                } else {
+                } else {                     //retorna array com o nome de todos os produtos
                     products.push(prod.name);
                 }
             });
         });
         if (obj) {
             randomProducts(products);
-            console.log(products);
         }
         return products;
     },
 
-    getProduct(i) {
+    getProduct(i) {  //retorna um objeto com um produto especifico
         let product;
         content.forEach(item => {
             item.produtos.forEach(prod => {

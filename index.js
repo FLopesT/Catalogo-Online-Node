@@ -1,12 +1,10 @@
 const express = require("express");
 const PORT = 3000;
 const app = express();
-//const path = require("path"); já incluida na nova versão xpress
-const bodyParser = require("body-parser");
+//const bodyParser = require("body-parser");
 const storeFunctions = require("./store/store").functions;
-//const apiRoute = require("./routes/api");//importando arquivo api de rotas
 
-function routeGenerator() {   //gerando rotas para categorias e produtos.
+function routeGenerator() {   //gera rotas para categorias e produtos.
     let categorys = storeFunctions.allCategorys();
     let products = storeFunctions.allProducts();
     categorys.forEach(item => {
@@ -24,7 +22,7 @@ function routeGenerator() {   //gerando rotas para categorias e produtos.
     });
 };
 
-app.get("/", (req, res) => {
+app.get("/", (req, res) => { //gera o arquivo index com todos os produtos
     let content = storeFunctions.allProducts(true);
     res.render("index", { content });
 });

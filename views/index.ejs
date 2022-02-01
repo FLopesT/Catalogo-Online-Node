@@ -4,127 +4,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="/styles/style.css">
     <title>Mobiliaria Nossa Senhora Aparecida</title>
-    <link rel="icon" href="./assets/images/icon.png">
+    <link rel="icon" href="/assets/images/icon.png">
 </head>
 
 <body>
     <div class="container">
 
-        <header>
-            <div class="topHeader">
+        <%-include("./partials/header.ejs")%>
 
-                <div id="brand">
-                    <a id="logoLink" href="./"><img class="logo" src="./assets/images/logops.png"
-                            alt="mobiliaria nossa senhora apareceida" title="logo"></a>
-                </div>
-                <h2 id="jingle">
-                    Sua casa, seu estilo
-                </h2>
+            <section>
+
+                <% for(let item of content){%>
 
 
-                <div id="banner" style="background-image: url(./assets/images/casa0.jpg);">
-                    <img id="wow" style="opacity:0%" src="./assets/images/wow.png">
-                </div>
-
-            </div>
-            <div class="menu">
-
-
-                <div class="links">
-                    <div onmouseover="bar()" class="departments">
-                        <canvas id="linha" width="30px" height="30px"></canvas>
-                        <p id="p">Categorias</p>
-
-                        <div id="barLinks">
-                            <div id="bar1"></div>
-                            <div id="bar2">
-                                <div class="linkBox"><a class="linkMenu"
-                                        href="./category/eletrodomesticos">Eletrodomésticos</a></div>
-                                <div class="linkBox"><a class="linkMenu" href="./category/sala">Sala</a></div>
-                                <div class="linkBox"><a class="linkMenu" href="./category/jantar">Jantar</a></div>
-                                <div class="linkBox"><a class="linkMenu" href="./category/quarto">Quarto</a></div>
-                                <div class="linkBox"><a class="linkMenu" href="./category/banheiro">Banheiro</a></div>
-                                <div class="linkBox"><a class="linkMenu" href="./category/escritorio">Escritório</a>
-                                </div>
-                            </div>
-                        </div>
-
+                    <div class="itemLink">
+                        <a href="/product/<%=item.name%>"><img src="<%=item.imgSrc%>" style="<%=item.inlineStyle%>"></a>
+                        <a>
+                            <h1>
+                                <%=item.title%>
+                            </h1>
+                        </a>
+                        <p>
+                            <%=item.about%>
+                        </p>
+                        <p class="preco">
+                            <%=item.price%>
+                        </p>
                     </div>
 
 
-                    <div class="contactAbout">
-                        <a onclick="fAnimation()" href="#ft">
-                            Contato</a>
-                        <a onclick="fAnimation()" href="#ft">
-                            Sobre</a>
-                    </div>
+                    <%}%>
 
-                </div>
+            </section>
 
-                <div class="network">
-                    <img title="Em breve" src="./assets/images/insta.png">
-                    <img title="Em breve" src="./assets/images/twitter.png">
-                    <img title="Em breve" src="./assets/images/face.png">
+            <%-include("./partials/footer.ejs")%>
 
-                </div>
-            </div>
-
-        </header>
-        <section>
-
-            <% for(let item of content){%>
-
-
-                <div class="itemLink">
-                    <a href="/product/<%=item.name%>"><img src="<%=item.imgSrc%>" style="<%=item.inlineStyle%>"></a>
-                    <a>
-                        <h1>
-                            <%=item.title%>
-                        </h1>
-                    </a>
-                    <p>
-                        <%=item.about%>
-                    </p>
-                    <p class="preco">
-                        <%=item.price%>
-                    </p>
-                </div>
-
-
-                <%}%>
-
-        </section>
-
-        <footer id="ft">
-            <img id="fa" src="./assets/images/wow.png" style="display:none;">
-            <div class="lastcontainer">
-                <div class="contact">
-                    <p>Venha nos visitar em:</p>
-                    <p>Rua da laranja, 99, Centro - Rio Pomba-MG - 36180-000</p>
-                    <p>Entre em contato:</p>
-                    <p> <img id="icon" src="./assets/images/wtzp.png"> WhatsApp +55 32 99999999<br> <img id="icontel"
-                            src="./assets/images/phone-icon.png"> Telefone 32 3571-9999</p>
-                    <p>Ou pelo Email:<a href="mailto:mnsaatendimento@email.com"> mnsaatendimento@email.com</a></p>
-                </div>
-
-                <div class="about">
-                    <h3> Mobiliaria Nossa Senhora Aparecida</h3>
-                    <p>A mais de 20 anos oferecendo uma grande variedade de produtos para sua casa, contando com
-                        atendimento
-                        diferenciado e eficiente, tudo isso para garantir o contentamento de nossos clientes.</p>
-                    <img class="card" src="./assets/images/bandeira-dos-cartoes-de-credito.png" title="card"
-                        width="400px">
-                </div>
-            </div>
-
-
-
-
-        </footer>
     </div>
-    <script src="./script/script.js"></script>
+    <script src="/script/script.js"></script>
 </body>
 
 </html>

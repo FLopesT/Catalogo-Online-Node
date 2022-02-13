@@ -2,6 +2,10 @@ const express = require("express");
 const router = express.Router();
 const storeFunctions = require("../store/storeContent").functions;
 
+router.get("/", (req, res) => { //gera o arquivo index com todos os produtos
+    let content = storeFunctions.allProducts(true);
+    res.render("index", { content });
+});
 
 let categorys = storeFunctions.allCategorys();
 let products = storeFunctions.allProducts();

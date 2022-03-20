@@ -184,6 +184,7 @@ p{
 
 .contactAbout a{
     padding-right: 20px; 
+    cursor: pointer;
 }
 
 .network{

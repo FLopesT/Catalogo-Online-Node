@@ -63,11 +63,19 @@ function bar() {
 
 //footer flash
 
+let ft = false;
+
 let fBlock = document.getElementById("fa");
 function fAnimation() {
-    //setTimeout precisou ser usado, pois quando a página executava
-    //essa função pela primeira vez, a animação ocorria antes de
-    //focar em footer
+
+    let time;
+    if (!ft) {
+        time = 500;
+        ft = true;
+    } else {
+        time = 300;
+    }
+    window.scrollTo(0, 9000);
     setTimeout(() => {
         fBlock.setAttribute("class", "wowFooter");
         fBlock.removeAttribute("style")
@@ -76,7 +84,7 @@ function fAnimation() {
             fBlock.setAttribute("style", "display:none")
         }
         setTimeout(remove, 500);
-    }, 300);
+    }, time);
 }
 
 //canvas----------------------------------------------------------------------
